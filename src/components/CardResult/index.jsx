@@ -6,7 +6,7 @@ function CardResult({ electoralNumber, avatar, namePresident, votesNumber }) {
         <>
             <div class="card">
                 <img src={avatar} alt="Avatar" className="card__avatar" />
-                <div class="container">
+                <div class="card__container">
                     <h2 className="card__name"><b>{namePresident || 'John Doe'}</b></h2>
                     <p>Electoral College</p>
                     <h1 className="card__electoral-number">{electoralNumber || '123'}</h1>
