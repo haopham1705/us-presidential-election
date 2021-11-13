@@ -9,6 +9,8 @@ import States from './pages/States'
 import StatesDetails from './pages/StatesDetails'
 import NotFound from './pages/NotFound'
 import Header from './components/Header';
+import 'antd/dist/antd.css';
+
 
 function App() {
   return (

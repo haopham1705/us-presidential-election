@@ -12,7 +12,8 @@
     padding: 1.5rem;
 }
 .card__name {
-
+font-size: 1.8rem;
+font-weight: 350;
 }
 
 .card:hover {
@@ -21,4 +22,14 @@
 
 .card__container {
     padding: 2px 16px;
+}
+.card__percentage {
+    font-size: 3rem;
+    font-weight: 600;
+    color: rgb(8, 107, 10);
+}
+.card__vote-number {
+    font-size: 1.2rem;
+    font-weight: 550;
+    color: rgb(39, 8, 107);
 }

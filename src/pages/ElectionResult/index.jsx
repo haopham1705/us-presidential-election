@@ -1,32 +1,58 @@
 import React, { useEffect, useState } from 'react'
-import CardResult from '../../components/CardResult' 
+import CardResult from '../../components/CardResult'
 import trumpImg from '../../assets/img/trump_180x180.png'
 import bidenImg from '../../assets/img/biden_180x180.png'
+import { Skeleton } from 'antd'
 import './ElectionResult.css'
 
-function ElectionResult({dataElection}) {
-    const [electoralNumber, setElectoralNumber] = useState([])
-    // const [votesNumber, setVotesNumber] = useState(123)
+function ElectionResult({ dataElection }) {
+    const [candidates, setCandidates] = useState([])
 
     useEffect(() => {
-        dataElection.length > 0 ? setElectoralNumber(dataElection[dataElection.length - 1]["electoralVotes"]) : setElectoralNumber('123')
-        
-        // dataElection.length > 0 ? setVotesNumber(dataElection[dataElection.length - 1]["candidates"]) : setVotesNumber('123123')
-        // console.log("🚀 ~ file: index.jsx ~ line 16 ~ useEffect ~ setVotesNumber", votesNumber) 
-        console.log("🚀 ~ file: index.jsx ~ line 16 ~ useEffect ~ setElectoralNumber", electoralNumber)
-        
+        // dataElection.length > 0 ? setCandidates(dataElection[dataElection.length - 1]["candidates"]) : []
+
+        if (dataElection.length > 0) {
+            setCandidates(dataElection[dataElection.length - 1]["candidates"])
+        } else {
+            setCandidates([]);
+        }
+
     }, [dataElection])
-    // const { name, number } = dataElection
-    
+    console.log("🚀 ~ file: index.jsx ~ line 25 ~ useEffect ~ setCandidates", candidates)
+
 
     return (
         <>
-        <div className="card-result">
-                <CardResult electoralNumber={electoralNumber} avatar={trumpImg} namePresident="Donald Trump" />
-                <CardResult electoralNumber={electoralNumber} avatar={bidenImg} namePresident="Joe Biden"/>
-        </div>
+            <div className="card-result">
+                {
+                    !dataElection ? (
+                        <>
+                            <Skeleton avatar paragraph={{ rows: 3 }} />
+                            <Skeleton avatar paragraph={{ rows: 3 }} />
+                        </>
+                    ) : (
+                        <>
+                            {
+                                candidates.map((candidate, index) => {
+                                    console.log("🚀 ~ file: index.jsx ~ line 49 ~ candidates.map ~ candidate", candidate)
+
+                                    return (
+                                        <CardResult
+                                            key={candidate["id"]}
+                                            avatar={candidate["fullName"] === "Donald Trump" ? trumpImg : bidenImg}
+                                            namePresident={candidate["fullName"]}
+                                            votePct={candidate["votePct"]}
+                                            votesNumber={candidate["vote"]}
+                                        />)
+                                })
+                            }
+                        </>
+                    )
+                }
+
+            </div>
         </>
     )
 }
-// dataElection
+
 export default ElectionResult

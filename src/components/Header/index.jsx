@@ -7,17 +7,17 @@ function Header() {
         <>
             <div className="navbar">
                 <p className="navbar__item">
-                    <NavLink to="/" activeClassName="active">
+                    <NavLink to="/" activeclassname="active">
                         President
                     </NavLink>
                 </p>
                 <p className="navbar__item">
-                    <NavLink to="/states" activeClassName="menu-active" >
+                    <NavLink to="/states" activeclassname="menu-active" >
                         States
                     </NavLink>
                 </p>
                 <p className="navbar__item">
-                    <NavLink to="/states-details" activeClassName="menu-active" >
+                    <NavLink to="/states-details" activeclassname="menu-active" >
                         States Details
                     </NavLink>
                 </p>
