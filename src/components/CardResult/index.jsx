@@ -11,7 +11,7 @@ function CardResult({ votePct, avatar, namePresident, votesNumber }) {
                 <div className="card__container">
                     <h2 className="card__name"><b>{namePresident || "John Doe"}</b></h2>
                     <h3>Win percentage</h3>
-                    <h1 className="card__percentage">{<CountUp start={0} end={votePct} duration={3} /> || "50"}%</h1>
+                    <h1 className="card__percentage">{<CountUp start={0} end={votePct} duration={1} /> || "50"}%</h1>
                     <h3>Votes</h3>
                     <p className="card__vote-number">{<CountUp start={0} end={votesNumber} duration={3} /> || "123123"}</p>
                 </div>

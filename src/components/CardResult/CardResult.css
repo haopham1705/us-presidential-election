@@ -3,6 +3,9 @@
     transition: 0.3s;
     width: 40%;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     padding: 15px;
 }
 .card__avatar {
@@ -12,7 +15,7 @@
     padding: 1.5rem;
 }
 .card__name {
-font-size: 1.8rem;
+font-size: 1.7rem;
 font-weight: 350;
 }
 
