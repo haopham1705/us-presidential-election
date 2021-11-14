@@ -23,7 +23,7 @@ function ElectionResult({ dataElection }) {
             {
                 !dataElection ? (
                     <>
-                        <Skeleton avatar paragraph={{ rows: 3 }} />
+                        <Skeleton avatar paragraph={{ rows: 3 }} />npx browserslist@latest --update-db
                         <Skeleton avatar paragraph={{ rows: 3 }} />
                     </>
                 ) : (
