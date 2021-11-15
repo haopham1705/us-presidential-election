@@ -4,11 +4,9 @@
     justify-content: space-around;
     align-items: center;
     margin: 1rem 0;
+    color: #000;
 }
 
-.App-link {
-    color: #0d0e0f;
-}
 
 .active {
     color: #fff;
@@ -22,6 +20,5 @@
 }
 
 a {
-    text-decoration: none;
     color: #000;
 }

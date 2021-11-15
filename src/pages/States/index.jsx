@@ -7,7 +7,7 @@ import './State.css'
 function States() {
     const [dataElection, setDataElection] = useState([])
     const [loading, setLoading] = useState(false)
-    
+
     console.log("🚀 ~ file: index.jsx ~ line 8 ~ States ~ dataElection", dataElection)
 
     useEffect(() => {
@@ -27,7 +27,7 @@ function States() {
 
             <div className="state-content__layout">
                 {
-                    !loading ? 
+                    !loading ?
                         (
                             dataElection.map((state) => {
                                 return (
@@ -42,10 +42,10 @@ function States() {
 
                                 )
                             })
-                         ) :
-                    ( 
-                                <Skeleton active />
-                    )
+                        ) :
+                        (
+                            <Skeleton active />
+                        )
                 }
             </div>
         </div>

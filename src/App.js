@@ -6,7 +6,8 @@ import {
 } from "react-router-dom";
 import HomePage from './pages/HomePage'
 import States from './pages/States'
-import StatesDetails from './pages/StatesDetails'
+// import StatesDetails from './pages/StatesDetails'
+import ListStates from './pages/ListStates'
 import NotFound from './pages/NotFound'
 import Header from './components/Header';
 import 'antd/dist/antd.css';
@@ -20,7 +21,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="states" element={<States />} />
-          <Route path="states-details" element={<StatesDetails />} />
+          <Route path="states-details" element={<ListStates />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
