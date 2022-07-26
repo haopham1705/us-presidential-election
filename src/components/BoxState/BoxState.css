@@ -8,6 +8,7 @@
     background-color: rgb(56, 56, 226);
     margin: 0.5rem;
     padding: 8px 0 5px;
+    cursor: pointer;
 }
 .state-box__name {
     margin: 0;

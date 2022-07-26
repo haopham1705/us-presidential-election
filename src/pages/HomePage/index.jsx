@@ -10,7 +10,7 @@ function HomePage() {
         const fetchDataElection = async () => {
             setLoading(true)
             const electionRes = await electionApi.getAll()
-            console.log("🚀 ~ file: index.jsx ~ line 11 ~ fetchDataElection ~ electionRes", electionRes)
+            // console.log("🚀 ~ file: index.jsx ~ line 11 ~ fetchDataElection ~ electionRes", electionRes)
             setDataElection(electionRes)
             setLoading(false)
         }

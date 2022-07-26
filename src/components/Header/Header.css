@@ -5,6 +5,10 @@
     align-items: center;
     margin: 1rem 0;
     color: #000;
+    list-style-type: none;
+}
+.navbar__item {
+    font-size: 20px;
 }
 
 

@@ -16,14 +16,14 @@ function ElectionResult({ dataElection }) {
             setCandidates([]);
         }
     }, [dataElection])
-    console.log("🚀 ~ file: index.jsx ~ line 25 ~ useEffect ~ setCandidates", candidates)
+    // console.log("🚀 ~ file: index.jsx ~ line 25 ~ useEffect ~ setCandidates", candidates)
 
     return (
         <div className="card-result">
             {
                 !dataElection ? (
                     <>
-                        <Skeleton avatar paragraph={{ rows: 3 }} />npx browserslist@latest --update-db
+                        <Skeleton avatar paragraph={{ rows: 3 }} />
                         <Skeleton avatar paragraph={{ rows: 3 }} />
                     </>
                 ) : (

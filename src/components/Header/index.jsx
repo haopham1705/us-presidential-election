@@ -5,23 +5,23 @@ import './Header.css'
 function Header() {
     return (
         <>
-            <div className="navbar">
-                <p className="navbar__item">
-                    <NavLink to="/" activeclassname="active">
+            <ul className="navbar">
+                <li className="navbar__item">
+                    <NavLink className="navbar__link" to="/" activeclassname="active">
                         President
                     </NavLink>
-                </p>
-                <p className="navbar__item">
-                    <NavLink to="/states" activeclassname="menu-active" >
+                </li>
+                <li className="navbar__item">
+                    <NavLink className="navbar__link" to="/states" activeclassname="menu-active" >
                         States
                     </NavLink>
-                </p>
-                <p className="navbar__item">
-                    <NavLink to="/states-details" activeclassname="menu-active" >
+                </li>
+                <li className="navbar__item">
+                    <NavLink className="navbar__link" to="/states-details" activeclassname="menu-active" >
                         States Details
                     </NavLink>
-                </p>
-            </div>
+                </li>
+            </ul>
         </>
     )
 }

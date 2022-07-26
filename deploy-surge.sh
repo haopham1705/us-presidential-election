@@ -8,4 +8,4 @@ cd build
 cp index.html 200.html
 
 #start deploying via surge', deploy current folder to this domain
-surge . covid19-tracker-haopham.surge.sh
+surge . us-election-2020.surge.sh

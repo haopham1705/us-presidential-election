@@ -34,7 +34,7 @@ function States() {
                                     <BoxState
                                         key={state["id"]}
                                         stateCode={state["stateCode"]}
-                                        electoralVotes={state["electoralVotes"]}
+                                        electoralVotes={state["electoralVotes"]} 
                                         rating={
                                             state["rating"] === "Rep Win" ? "state-box__bg-rep" : "state-box__bg-dem"
                                         }
